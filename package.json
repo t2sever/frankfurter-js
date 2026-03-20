@@ -1,0 +1,49 @@
+{
+  "name": "frankfurter-js",
+  "version": "0.1.0",
+  "description": "A lightweight TypeScript SDK for the Frankfurter currency API.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsdown src/index.ts --format esm,cjs --dts",
+    "dev": "tsdown src/index.ts --format esm,cjs --dts --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "frankfurter",
+    "currency",
+    "exchange-rates",
+    "forex",
+    "sdk",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsdown": "^0.21.4",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.0"
+  }
+}
