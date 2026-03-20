@@ -2,7 +2,12 @@
   "name": "frankfurter-js",
   "version": "0.1.0",
   "description": "A lightweight TypeScript SDK for the Frankfurter currency API.",
+  "author": "tinsever",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t2sever/frankfurter-js"
+  },
   "type": "module",
   "sideEffects": false,
   "engines": {
